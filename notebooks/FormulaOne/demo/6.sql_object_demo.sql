@@ -104,4 +104,12 @@ select split(t1.name,' ') from processed.circuits_sql t1;
 
 -- COMMAND ----------
 
+desc table extended processed.circuits_sql
+
+-- COMMAND ----------
+
+select nationality, name, dob, rank() over(partition by (nationality) order by dob desc) as age_rank from processed.drivers_sql order by nationality, age_rank;
+
+-- COMMAND ----------
+
 
