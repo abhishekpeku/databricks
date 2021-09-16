@@ -83,8 +83,4 @@ results_final_df.write.mode('overwrite').partitionBy('race_id').format('parquet'
 
 # COMMAND ----------
 
-display(spark.read.parquet("/mnt/formulastg/processed/results"))
-
-# COMMAND ----------
-
 dbutils.notebook.exit("success")

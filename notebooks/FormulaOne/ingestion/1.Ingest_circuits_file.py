@@ -67,8 +67,4 @@ dbutils.notebook.exit("success")
 
 # COMMAND ----------
 
-# MAGIC %sql
-# MAGIC desc table extended processed.circuits_sql;
-
-# COMMAND ----------
 

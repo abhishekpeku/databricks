@@ -88,8 +88,4 @@ drivers_final_df.write.mode('overwrite').format('parquet').saveAsTable('processe
 
 # COMMAND ----------
 
-display(spark.read.parquet("/mnt/formulastg/processed/drivers"))
-
-# COMMAND ----------
-
 dbutils.notebook.exit("success")

@@ -49,9 +49,4 @@ construct_final_df.write.mode('overwrite').format('parquet').saveAsTable('proces
 
 # COMMAND ----------
 
-# MAGIC %fs 
-# MAGIC ls /mnt/formulastg/processed/constructors
-
-# COMMAND ----------
-
 dbutils.notebook.exit("success")

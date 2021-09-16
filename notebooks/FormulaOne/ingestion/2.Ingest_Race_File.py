@@ -76,8 +76,4 @@ races_selected_df.write.mode('overwrite').partitionBy('race_year').format('parqu
 
 # COMMAND ----------
 
-display(spark.read.parquet('/mnt/formulastg/processed/races'))
-
-# COMMAND ----------
-
 dbutils.notebook.exit("success")

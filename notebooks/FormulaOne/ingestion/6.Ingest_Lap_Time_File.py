@@ -49,8 +49,4 @@ pit_stops_final_df.write.mode('overwrite').format('parquet').saveAsTable('proces
 
 # COMMAND ----------
 
-display(spark.read.parquet("/mnt/formulastg/processed/pit_stops"))
-
-# COMMAND ----------
-
 dbutils.notebook.exit("success")

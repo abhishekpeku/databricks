@@ -35,7 +35,7 @@ select current_database();
 
 -- COMMAND ----------
 
-show tables;
+show tables in processed;
 
 -- COMMAND ----------
 
@@ -88,7 +88,20 @@ show tables;
 
 -- COMMAND ----------
 
-desc extended default.circuits_table_ext_py;
+desc extended processed.circuits_sql;
 
 -- COMMAND ----------
+
+desc extended processed.races_sql;
+
+-- COMMAND ----------
+
+select t2.* from processed.circuits_sql t1, processed.races_sql t2 where t1.circuit_id = t2.circuit_id;
+
+-- COMMAND ----------
+
+select split(t1.name,' ') from processed.circuits_sql t1;
+
+-- COMMAND ----------
+
 
